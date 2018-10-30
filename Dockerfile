@@ -12,6 +12,8 @@ RUN apk update && \
     tar xvzf out.tar.gz && \
     ./Bluemix_CLI/install && \
     ibmcloud plugin install container-service -r Bluemix && \
+    ibmcloud plugin update container-registry -r Bluemix && \
+\
     rm out.tar.gz && \
     curl -LO https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/amd64/kubectl && \
     mv kubectl /root/bin && \
