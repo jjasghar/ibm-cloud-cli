@@ -1,5 +1,7 @@
 # IBM cloud CLI Docker container
 
+[![Build Status](https://travis-ci.org/jjasghar/ibm-cloud-cli.svg?branch=master)](https://travis-ci.org/jjasghar/ibm-cloud-cli)
+
 ## Scope
 
 This is the a container of everything you need for the [Kube101](https://github.com/IBM/kube101)
