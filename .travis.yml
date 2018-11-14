@@ -27,8 +27,9 @@ script:
 # and then `travis set ..` or go to the travis
 # page of your repository and then change the
 # environment in the settings pannel.
-after_success:
-  - if [[ "$BRANCH" == "master" ]]; then
-      docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD ;
-      make push-image ;
-    fi
+deploy:
+  script:
+    - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+    - make push-image
+  on:
+    branch: master
