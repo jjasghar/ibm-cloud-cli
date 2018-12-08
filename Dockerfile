@@ -1,8 +1,8 @@
 FROM alpine:3.8
 
-ENV IBM_CLOUD_CLI=1.1.1
+ENV IBM_CLOUD_CLI=1.2.0
 ENV KUBECTL_VERSION=1.12.1
-ENV IBMCLOUDCLI_VERSION=0.10.1
+ENV IBMCLOUDCLI_VERSION=0.12.1
 
 WORKDIR "/root"
 
@@ -26,3 +26,4 @@ RUN echo 'cat /etc/motd' >> /root/.bashrc
 RUN echo 'Thank you for using the IBM Cloud-Native Docker Container. In your first login, we suggest you ibmcloud login to authenticate against the IBM cloud API.' > /etc/motd
 
 ENTRYPOINT ["bash"]
+EXPOSE 8080-8085
